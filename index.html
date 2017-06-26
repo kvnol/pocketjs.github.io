@@ -8,6 +8,29 @@ description: Aprendendo a programar com pequenas doses de JavaScript.
   {% include aside.html %}
 
   <section class="content">
-    
+    <ul class="posts-list">
+      {% for post in site.posts %}<li class="posts-item">
+        <a href="{{ post.url }}" class="posts-link">{{ post.title }}</a>
+        <time class="posts-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {% assign m = post.date | date: "%-m" %}
+          {{ post.date | date: "%-d" }}
+          {% case m %}
+            {% when '1' %}Jan,
+            {% when '2' %}Fev,
+            {% when '3' %}Mar,
+            {% when '4' %}Abr,
+            {% when '5' %}Mai,
+            {% when '6' %}Jun,
+            {% when '7' %}Jul,
+            {% when '8' %}Ago,
+            {% when '9' %}Set,
+            {% when '10' %}Out,
+            {% when '11' %}Nov,
+            {% when '12' %}Dez,
+          {% endcase %}
+          {{ post.date | date: "%Y" }}
+        </time>
+      </li>{% endfor %}
+    </ul>
   </section>
 </main>
