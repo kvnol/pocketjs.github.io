@@ -4,6 +4,16 @@
     family: 'Archivo Black', sans-serif
     size: 2rem
     weight: normal
+
+  &-link
+    +transition(.2s all ease)
+    display: block
+    color: #000
+
+    &:hover
+      +translate(0, -5px)
+      text-decoration: none
+      opacity: .6
   
   &_pocket
     position: relative
