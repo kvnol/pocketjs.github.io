@@ -1,0 +1,52 @@
+---
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} - {{ site.title }}</title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto:300,300i,500,700,900">
+</head>
+<body>
+<main class="main" role="main">
+  {% include aside.html %}
+
+  <section class="content">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+          {% assign m = page.date | date: "%-m" %}
+          {{ page.date | date: "%-d" }}
+          {% case m %}
+            {% when '1' %}Jan,
+            {% when '2' %}Fev,
+            {% when '3' %}Mar,
+            {% when '4' %}Abr,
+            {% when '5' %}Mai,
+            {% when '6' %}Jun,
+            {% when '7' %}Jul,
+            {% when '8' %}Ago,
+            {% when '9' %}Set,
+            {% when '10' %}Out,
+            {% when '11' %}Nov,
+            {% when '12' %}Dez,
+          {% endcase %}
+          {{ page.date | date: "%Y" }}
+        </time>
+      </header>
+
+      <div class="post-content">
+      {{ content }}  
+      </div>
+    </article>
+  </section>
+</main>
+
+{% include ga.html %}
+</body>
+</html>
