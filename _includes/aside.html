@@ -1,0 +1,17 @@
+<aside class="bar">
+  <header class="masthead" role="banner">
+    <{% if page.url == '/' %}h1{% else %}h2{% endif %} class="mastheadLogo">
+      <span class="mastheadLogo_pocket">Pocket</span><span class="mastheadLogo_js">JS</span>
+    </{% if page.url == '/' %}h1{% else %}h2{% endif %}>
+  </header>
+  <nav class="menu" role="menu">
+    <h3 class="menu-title">Últimos posts</h3>
+    <ol class="menu-list">{% for post in site.posts %}
+      <div class="menu-shadow menu-shadow_top"></div>
+      <li class="menu-item">
+        <a href="{{ post.url }}" class="menu-link">{{ post.title }}</a>
+      </li>
+      <div class="menu-shadow menu-shadow_bottom"></div>
+    {% endfor %}</ol>
+  </nav>
+</aside>

@@ -5,20 +5,7 @@ description: Aprendendo a programar com pequenas doses de JavaScript.
 ---
 
 <main class="main" role="main">
-  <aside class="bar">
-    <header class="masthead" role="banner">
-      <{% if page.url == '/' %}h1{% else %}h2{% endif %} class="mastheadLogo">
-        <span class="mastheadLogo_pocket">Pocket</span><span class="mastheadLogo_js">JS</span>
-      </{% if page.url == '/' %}h1{% else %}h2{% endif %}>
-    </header>
-    <nav class="barPosts" role="menu">
-      <ol class="barPosts-list">{% for post in site.posts %}
-        <li class="barPosts-item">
-          <a href="{{ post.url }}" class="barPosts-link">{{ post.title }}</a>
-        </li>
-      {% endfor %}</ol>
-    </nav>
-  </aside>
+  {% include aside.html %}
 
   <section class="content">
     
