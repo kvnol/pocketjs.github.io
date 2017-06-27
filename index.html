@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PocketJS
+title: Pocket JavaScript
 description: Aprendendo a programar com pequenas doses de JavaScript.
 ---
 
@@ -10,7 +10,7 @@ description: Aprendendo a programar com pequenas doses de JavaScript.
   <section class="content">
     <ul class="posts-list">
       {% for post in site.posts %}<li class="posts-item">
-        <a href="{{ post.url }}" class="posts-link">{{ post.title }}</a>
+        <a class="posts-link" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         <time class="posts-date" datetime="{{ post.date | date_to_xmlschema }}">
           {% assign m = post.date | date: "%-m" %}
           {{ post.date | date: "%-d" }}
