@@ -1,0 +1,42 @@
+.menu
+
+  &-list
+    position: relative
+    overflow-y: scroll
+    margin: 0
+    padding: 0
+    max-height: 15.28rem
+
+    &::-webkit-scrollbar-track
+
+    &::-webkit-scrollbar
+      width: 6px
+      background-color: #fff
+
+    &::-webkit-scrollbar-thumb
+      background-color: #999
+      +border-radius(.6rem)
+
+  &-item,
+  &-link
+    font-weight: 300
+    color: lighten(#000, 75%)
+
+  &-item
+    &:not(:last-child)
+      margin-bottom: .5rem
+
+  &-link:hover
+    color: $theme-color
+
+  &-shadow
+    position: absolute
+    width: 8.333rem
+
+    &_top
+      top: 0
+      +box-shadow(0 5px 30px 5px #fff)
+
+    &_bottom
+      bottom: 0
+      +box-shadow(0 -5px 30px 5px #fff)

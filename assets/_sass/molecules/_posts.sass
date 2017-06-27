@@ -1,0 +1,25 @@
+.posts-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.posts-item
+  @extend %flexbox
+  +align-items(center)
+  padding: 1rem 0
+
+  &:first-child
+    padding-top: 0
+
+  &:not(:last-child)
+    border-bottom: 1px solid #e5e5e5
+
+.posts-link
+  margin-right: 1rem
+  font:
+    size: 2rem
+    weight: normal
+
+.posts-date
+  font-size: .9rem
+  color: lighten(#000, 75%)

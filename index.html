@@ -1,26 +1,38 @@
 ---
 layout: default
-title: PocketJS
+title: Pocket JavaScript
 description: Aprendendo a programar com pequenas doses de JavaScript.
 ---
 
 <main class="main" role="main">
-  <aside class="bar">
-    <header class="masthead" role="banner">
-      <{% if page.url == '/' %}h1{% else %}h2{% endif %} class="mastheadLogo">
-        <span class="mastheadLogo_pocket">Pocket</span><span class="mastheadLogo_js">JS</span>
-      </{% if page.url == '/' %}h1{% else %}h2{% endif %}>
-    </header>
-    <nav class="barPosts" role="menu">
-      <ol class="barPosts-list">{% for post in site.posts %}
-        <li class="barPosts-item">
-          <a href="{{ post.url }}" class="barPosts-link">{{ post.title }}</a>
-        </li>
-      {% endfor %}</ol>
-    </nav>
-  </aside>
+  {% include aside.html %}
 
   <section class="content">
-    
+    <ul class="posts-list">
+      {% for post in site.posts %}<li class="posts-item">
+        <a class="posts-link" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <time class="posts-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {% assign m = post.date | date: "%-m" %}
+          {{ post.date | date: "%-d" }}
+          {% case m %}
+            {% when '1' %}Jan,
+            {% when '2' %}Fev,
+            {% when '3' %}Mar,
+            {% when '4' %}Abr,
+            {% when '5' %}Mai,
+            {% when '6' %}Jun,
+            {% when '7' %}Jul,
+            {% when '8' %}Ago,
+            {% when '9' %}Set,
+            {% when '10' %}Out,
+            {% when '11' %}Nov,
+            {% when '12' %}Dez,
+          {% endcase %}
+          {{ post.date | date: "%Y" }}
+        </time>
+      </li>{% endfor %}
+    </ul>
   </section>
+
+  {% include footer.html %}
 </main>

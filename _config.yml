@@ -1,9 +1,9 @@
-title: PocketJS
+title: Pocket JavaScript
 email: your-email@example.com
 description: >
   Aprendendo a programar com pequenas doses de JavaScript.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://pocketjs.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 analytics: UA-20338334-13
 
 # Build settings
