@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Qual a diferença entre var, let e const?"
+description: "No JavaScript o escopo das variáveis pode se tornar um problema. Então, para evitá-los, saiba a diferença entre declarar variáveis com var, let e const."
 date: 2017-06-26 11:55:55 -0300
 comments: true
 ---
