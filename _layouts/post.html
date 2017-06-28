@@ -44,6 +44,19 @@
       {{ content }}  
       </div>
 
+      <nav class="post-navigation">
+        {% if page.previous.url %}
+        <a class="post-navigation_item post-navigation_prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}" rel="prev">&laquo; {{ page.previous.title }}</a>
+        {% else %}
+        <a class="post-navigation_item post-navigation_prev" href="#" title="" rel="prev"></a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="post-navigation_item post-navigation_next" href="{{ page.next.url }}" title="{{ page.next.title }}" rel="next">{{ page.next.title }} &raquo;</a>
+        {% else %}
+        <a class="post-navigation_item post-navigation_next" href="#" title="" rel="next"></a>
+        {% endif %}
+      </nav>
+
       {% if page.comments %}
       <div class="post-comments">
         <div id="disqus_thread"></div>
