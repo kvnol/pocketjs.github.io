@@ -6,12 +6,16 @@
   </header>
   <nav class="menu" role="menu">
     <h3 class="menu-title">Últimos posts</h3>
-    <ol class="menu-list">{% for post in site.posts %}
+    <ol class="menu-list">
+    {% for post in site.posts %}
+    {% if post.visible %}
       <div class="menu-shadow menu-shadow_top"></div>
       <li class="menu-item">
         <a class="menu-link" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       </li>
       <div class="menu-shadow menu-shadow_bottom"></div>
-    {% endfor %}</ol>
+    {% endif %}
+    {% endfor %}
+    </ol>
   </nav>
 </aside>
