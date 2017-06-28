@@ -3,8 +3,19 @@
   right: 2rem
   bottom: 2rem
 
+  @media (max-width: 53.125rem)
+    position: inherit
+    margin: 2rem 0 0
+
+  @media (max-width: 86.875rem)
+    right: inherit
+    left: 2rem
+
   p 
     margin: 0
     font-size: .85rem
     text-align: right
     color: lighten(#000, 75%)
+
+    @media (max-width: 86.875rem)
+      text-align: left
