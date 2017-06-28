@@ -18,3 +18,14 @@
 
 .post-content p
   line-height: 1.75rem
+
+.post-navigation
+  @extend %flexbox
+  +align-items(center)
+  +justify-content(space-between)
+
+  &_item
+    width: 50%
+
+  &_next
+    text-align: right
