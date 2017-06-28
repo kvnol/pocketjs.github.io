@@ -1,13 +1,27 @@
+---
+---
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<link rel="canonical" href="{{ page.redirect_to }}"/>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+  <title>Redirecionando - {{ site.title }}</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="{{ page.redirect_to }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto:300,300i,500,700,900">
 </head>
 <body>
-    <h1>Redirecionando...</h1>
-    <a href="{{ page.redirect_to }}">Clique aqui se você não for redirecionado.<a>
-    <script>location='{{ page.redirect_to }}'</script>
+  <main class="main" role="main">
+    {% include aside.html %}
+    <section class="content">
+      <article class="redirect">
+        <h1 class="post-title">Redirecionando...</h1>
+        <a href="{{ page.redirect_to }}">Clique aqui se você não for redirecionado.<a>
+      </article>
+    </section>
+  </main>
+  <script>location='{{ page.redirect_to }}'</script>
 </body>
 </html>
