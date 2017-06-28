@@ -5,6 +5,10 @@
   @extend %flexbox
   +align-items(center)
 
+  @media (max-width: 34.375rem)
+    +align-items(flex-start)
+    +flex-direction(column)
+
 .post-title
   margin:
     top: 0
