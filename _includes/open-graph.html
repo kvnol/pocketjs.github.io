@@ -1,0 +1,14 @@
+{% if page.layout == 'post' %}
+<meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+<meta property="og:type" content="article" />
+{% else %}
+<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:type" content="blog" />
+{% endif %}
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+{% if page.layout == 'post' %}
+<meta property="og:image" content="{{ page.image | prepend: site.url }}" />
+{% else %}
+<meta property="og:image" content="{{ site.logo | prepend: site.url }}" />
+{% endif %}

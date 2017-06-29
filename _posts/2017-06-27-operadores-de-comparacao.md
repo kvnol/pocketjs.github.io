@@ -5,6 +5,7 @@ description: "Você sabe o que são e como funcionam os operadores de comparaç�
 date: 2017-06-27 16:42:55 -0300
 comments: true
 visible: true
+image: /assets/img/posts/operadorescomparacao.png
 ---
 
 Utilizados para fazer testes e verificações no seu código, os operadores de comparação fazem parte da matemática básica dentro do JavaScript e retornam `true` (verdadeiro) ou `false` (falso) dependendo dos valores que estão sendo comparados.

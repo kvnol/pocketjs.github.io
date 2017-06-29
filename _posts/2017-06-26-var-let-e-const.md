@@ -5,6 +5,7 @@ description: "No JavaScript o escopo das variáveis pode se tornar um problema. 
 date: 2017-06-26 11:55:55 -0300
 comments: true
 visible: true
+image: /assets/img/posts/varletconst.png
 ---
 
 Qualquer variável definida sem a utilização do `var`, `let` ou `const` possui escopo global e pode ser acessada em qualquer parte de seu código JavaScript e isso pode acarretar uma série de problemas, mas qual a diferença entre essas palavras?
