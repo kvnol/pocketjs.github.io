@@ -5,4 +5,4 @@
 
 ## To Do
 - [x] Implementar Facebook Open Graph
-- [ ] Implementar Twitter Cards
+- [ ] Implementar Twitter Cards ([#4](https://github.com/kvnol/pocketjs/issues/4))
