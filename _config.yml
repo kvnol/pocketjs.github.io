@@ -3,8 +3,8 @@ email: your-email@example.com
 description: >
   Aprendendo a programar com pequenas doses de JavaScript.
 logo: /assets/img/logo.png
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://pocketjs.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/pocketjs" # the subpath of your site, e.g. /blog
+url: "https://kvnol.github.io/pocketjs" # the base hostname & protocol for your site, e.g. http://example.com
 analytics: UA-20338334-13
 permalink: /:title
 # Build settings
